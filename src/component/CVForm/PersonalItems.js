@@ -18,6 +18,7 @@ const PersonalItems = (props) =>{
                 type="text"
                 name="firstName"
                 id="firstNameInput"
+                className="personalInformation"
                 placeholder="First name"
                 onChange={props.handleChangePersonal}
             />
@@ -62,7 +63,7 @@ const PersonalItems = (props) =>{
                 onChange={props.handleChangePersonal}
             />
 
-            <button onClick={cleanPersonalInformation}>Clean data</button>
+            <button id="btnCleanDataPersonal" onClick={cleanPersonalInformation}>Clean data</button>
         </div>
     )
 }

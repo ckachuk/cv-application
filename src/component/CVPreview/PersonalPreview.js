@@ -9,6 +9,7 @@ const PersonalPreview = (props)=>{
 
     return(
         <div>
+            <h1>Personal information</h1>
             {fullName}
             <p>{personalInformation.email}</p>
             <p>{personalInformation.phone}</p>

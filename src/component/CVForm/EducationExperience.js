@@ -4,8 +4,9 @@ import EducationalItems from "./EducationalItems";
 const EducationalExperience = (props)=>{
 
     return(
-        <div>
-            <EducationalItems onsubmit={props.onsubmit} inputHandler={props.inputHandler}/>
+        <div className="educationInputs">
+            <h2 id="hEducationalExperience">Educational experience</h2>
+            <EducationalItems onSubmitEducation={props.onSubmitEducation} inputHandler={props.inputHandler} />
         </div>
     )
 }

@@ -2,43 +2,45 @@ import React from "react";
 
 const Workitems = (props)=>{
     return(
-        <form>
+        <form onSubmit={props.onSubmitWork}>
             <input
                 type="text"
                 name="companyName"
                 id="companyNameInput"
+                className="work"
                 placeholder="Company name"
+                onChange={props.inputHandler}
             />
             
             <input
                 type="text"
                 name="position"
                 id="positionInput"
+                className="work"
                 placeholder="Position"
+                onChange={props.inputHandler}
             />
             
-            <input
-                type="text"
-                name="city"
-                id="cityInput"
-                placeholder="City"
-            />
 
             <input
                 type="date"
                 name="from"
-                id="fromInput"
+                id="fromInputWork"
+                className="work"
                 placeholder="From"
+                onChange={props.inputHandler}
             />
 
             <input
                 type="date"
                 name="to"
-                id="toInput"
+                id="toInputWork"
+                className="work"
                 placeholder="To"
+                onChange={props.inputHandler}
             />
 
-            <button>ADD</button>
+            <button id="btnSubmitWork">ADD</button>
         </form>
     )
 }

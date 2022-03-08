@@ -1,38 +1,238 @@
-.App {
+:root{
+  --color1: #23202a;
+  --color2: #332837;
+  --color3: #4c364b;
+  --color4: #6b4b61;
+  --color5: #93687f;
+  --color6: #f6ecfa;
+}
+
+body{
+  background-color: var(--color6);
+  font-family: 'Lato', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.inputInformation{
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: auto;
+  grid-template-areas: "personalInputs educationInputs workInputs";
+}
+
+.personalInputs{
+  background-color: var(--color2);
+  grid-area: personalInputs;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "hPersonal"
+  "firstName"
+  "lastName"
+  "email"
+  "country"
+  "address"
+  "phone"
+  "btn";
+  justify-items: center;
+}
+
+#hPersonalInput{
+  grid-area: hPersonal;
+  width: 1fr;
+  color: var(--color6);
+}
+
+#firstNameInput{
+  grid-area: firstName;
+  width: 50%;
+  margin: 0px 0px 7px 25%;
+}
+
+#lastNameInput{
+  grid-area: lastName;
+  width: 50%;
+  margin: 0px 0px 7px 25%;
+}
+
+#emailInput{
+  grid-area: email;
+  width: 50%;
+  margin: 0px 0px 7px 25%;
+}
+
+#countryInput{
+  grid-area: country;
+  width: 50%;
+  margin: 0px 0px 7px 25%;
+}
+
+#addressInput{
+  grid-area: address;
+  width: 50%;
+  margin: 0px 0px 7px 25%;
+}
+
+#phoneInput{
+  grid-area: phone;
+  width: 50%;
+  margin: 0px 0px 7px 25%;
+}
+
+#btnCleanDataPersonal{
+  grid-area: btn;
+  width: 40%;
+  margin: 25px 0px 20px 30%;
+}
+
+.educationInputs{
+  background-color: var(--color3);
+  grid-area: educationInputs;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "university"
+  "country"
+  "city"
+  "titleStudy"
+  "from"
+  "to"
+  "btnEducation";
+  justify-items: center;
+}
+
+#hEducationalExperience{
+  color: var(--color6);
+}
+#universityNameInput{
+  grid-area: university;
+  width: 50%;
+  margin: 0px 0px 7px 25%;
+
+}
+#countryInput{
+  grid-area: country;
+  width: 50%;
+  margin: 0px 0px 7px 25%;
+}
+#cityInput{
+  grid-area: city;
+  width: 50%;
+  margin: 0px 0px 7px 25%;
+}
+#titleStudyInput{
+  grid-area: titleStudy;
+  width: 50%;
+  margin: 0px 0px 7px 25%;
+}
+#fromInput{
+  grid-area: from;
+  width: 50%;
+  margin: 0px 0px 7px 25%;
+}
+#toInput{
+  grid-area: to;
+  width: 50%;
+  margin: 0px 0px 7px 25%;
+}
+#btnSubmitEducation{
+  grid-area: btnEducation;
+  width: 40%;
+  margin: 25px 0px 20px 30%;
+}
+
+
+.workInputs{
+  background-color: var(--color4);
+  grid-area: workInputs;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "company"
+  "position"
+  "from"
+  "to"
+  "btnWork";
+  justify-items: center;
+}
+
+#hWorkExperience{
+  color: var(--color6);
+}
+#companyNameInput{
+  grid-area: company;
+  width: 50%;
+  margin: 0px 0px 7px 25%;
+}
+
+#positionInput{
+  grid-area: position;
+  width: 50%;
+  margin: 0px 0px 7px 25%;
+}
+
+#fromInputWork{
+  grid-area: from;
+  width: 50%;
+  margin: 0px 0px 7px 25%;
+}
+
+#toInputWork{
+  grid-area: to;
+  width: 50%;
+  margin: 0px 0px 7px 25%;
+}
+
+#btnSubmitWork{
+  grid-area: btnWork;
+  width: 40%;
+  margin: 25px 0px 20px 30%;
+}
+
+
+.cvInfo{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type=text],input[type=email],input[type=tel],input[type=date], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  width: 100%;
+  background-color: var(--color6);
+  color: var(--color1);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button:hover {
+  background-color: var(--color1);
+  color: var(--color6);
 }
 
-.App-link {
-  color: #61dafb;
+#btnDelete{
+  grid-area: btn;
+  width: 20%;
+  background-color: maroon;
+  color: var(--color6);
+  margin: 25px 0px 20px 0px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#btnDelete:hover{
+  background-color: var(--color6);
+  border: 2px solid maroon;
+  color: maroon;
 }
