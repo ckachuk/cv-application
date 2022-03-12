@@ -1,8 +1,6 @@
 import React from "react";
 
 const EducationalItems = function(props){
-    
-    
 
     return(
         <form onSubmit={props.onSubmitEducation} >
